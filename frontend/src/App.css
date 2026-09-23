@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  color: #19231f;
+  background: #f3f6f2;
+  font-family: 'DM Sans', sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: 0.65; }
+
+.app-shell { min-height: 100vh; background: radial-gradient(circle at 90% 0%, #d9eee6 0, transparent 34%), #f3f6f2; }
+.app-header { padding: 32px max(24px, calc((100% - 1180px) / 2)); display: flex; justify-content: space-between; align-items: center; }
+.brand { color: #157a63; font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.02em; }
+.header-status { color: #617169; font-size: 0.86rem; }
+main { width: min(1180px, calc(100% - 48px)); margin: 52px auto 80px; }
+.hero { max-width: 720px; margin-bottom: 42px; }
+.eyebrow { color: #157a63; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; margin: 0 0 10px; text-transform: uppercase; }
+h1, h2 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 0.98; letter-spacing: -0.04em; }
+h2 { font-size: 1.45rem; }
+.hero-copy { color: #617169; font-size: 1.08rem; line-height: 1.6; margin: 20px 0 0; max-width: 560px; }
+.workspace { display: grid; gap: 24px; }
+.upload-panel, .documents-section { background: #fff; border: 1px solid #dce5df; border-radius: 8px; box-shadow: 0 16px 40px rgba(43, 73, 59, 0.06); }
+.upload-panel { display: grid; gap: 28px; padding: 28px; }
+.muted { color: #617169; margin: 8px 0 0; }
+.upload-controls { display: flex; gap: 12px; flex-wrap: wrap; }
+.file-picker { align-items: center; border: 1px dashed #9eb7aa; border-radius: 6px; color: #617169; display: flex; flex: 1; min-height: 48px; min-width: 220px; overflow: hidden; padding: 0 16px; }
+.file-picker span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.file-picker input { display: none; }
+.primary-button, .secondary-button { border: 0; border-radius: 5px; font-weight: 700; min-height: 48px; padding: 0 18px; }
+.primary-button { background: #157a63; color: #fff; }
+.primary-button:hover { background: #0f624f; }
+.secondary-button { background: #e8f2ed; color: #15634f; min-height: 38px; }
+.documents-section { padding: 28px; }
+.section-heading { align-items: center; display: flex; justify-content: space-between; margin-bottom: 22px; }
+.document-count { background: #edf4ef; border-radius: 999px; color: #557065; font-size: 0.82rem; padding: 7px 12px; }
+.document-table { overflow-x: auto; }
+.table-row { align-items: center; border-top: 1px solid #e8eeea; display: grid; gap: 16px; grid-template-columns: minmax(180px, 2fr) 0.8fr 1.3fr 1fr 0.8fr; min-width: 760px; padding: 16px 4px; }
+.table-row > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.table-header { border-top: 0; color: #829189; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.state-message { color: #617169; padding: 24px 0 4px; }
+.error-message, .inline-error { color: #b5473f; }
+.download-action { align-items: center; display: flex; gap: 8px; }
+.inline-error { font-size: 0.75rem; }
+
+@media (max-width: 700px) {
+  .app-header { padding: 24px; }
+  .header-status { display: none; }
+  main { margin-top: 28px; width: min(100% - 32px, 1180px); }
+  .upload-panel, .documents-section { padding: 20px; }
+  .upload-controls { display: grid; }
+  .file-picker, .primary-button { width: 100%; }
+  .section-heading { align-items: flex-start; gap: 12px; }
+}
